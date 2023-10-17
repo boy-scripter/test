@@ -320,7 +320,7 @@
       </div>
     </div>
     <div
-      id="scrollelemnt" class="text-center  sticky bg-white bottom-0 z-20 text-sm py-4 grid grid-cols-4"
+      id="scrollelemnt" class="text-center hidden sticky bg-white bottom-0 z-20 text-sm py-4 grid grid-cols-4"
     >
       <div class="border-r-2 border-black">
         <i class="text-xl fa-solid fa-phone"></i><br />
@@ -383,18 +383,19 @@
         },
       });
 
-      // Get the element to hide/show
+  
       const element = document.querySelector("#scrollelemnt");
 
+      
      
       window.addEventListener("scroll", function () {
         const scrollTop = window.pageYOffset;
 
-        if (scrollTop === 0 && !element.classList.contains("hidden")) {
+        if (scrollTop === 0 ) {
           element.classList.add("hidden");
         }
 
-        if (scrollTop > 150 && element.classList.contains("hidden")) {
+        if (scrollTop > 150) {
           element.classList.remove("hidden");
         }
       });
